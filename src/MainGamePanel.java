@@ -1,18 +1,20 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.event.KeyEvent.*;
-import java.util.Random;
-import java.util.Random.*;
+
 import javax.swing.*;
 
 public class MainGamePanel extends JPanel {
+    private GameArea ga;
 
 
     MainGamePanel() {
         //this.setPreferredSize(new Dimension(500,500));
       //  this.setBackground(Color.pink);
-        this.add(new GameArea(10));
+        ga = new GameArea(10);
+        this.add(ga);
+        startGame();
+    }
 
+    public void startGame(){
+        new GameThread(ga).start();
     }
 
 
