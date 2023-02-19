@@ -7,6 +7,7 @@ Random random = new Random();
     private int[][] shape;
     private Color color;
     private int x,y;
+    private int xBound;
 
     TetrisBlock(int[][] shape, Color color) {
         this.shape = shape;
@@ -18,6 +19,7 @@ Random random = new Random();
     public void spawn(int gridWidth){
         y=-getHeight();
         x= (gridWidth-getWidth())/2;
+        xBound=gridWidth;
     }
 
     public Color getColorr() {
@@ -43,8 +45,14 @@ Random random = new Random();
     }
     public void moveDown(){y++;}
     public void moveUp(){y--;}
-    public void moveLeft(){x--;}
-    public void moveRight(){x++;}
+    public void moveLeft(){
+        if(x>0)
+        x--;
+    }
+    public void moveRight(){
+        if(x<(xBound-shape[0].length))
+        x++;
+    }
     public int getBottomEdge(){
         return y + getHeight();
     }

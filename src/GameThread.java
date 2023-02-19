@@ -11,6 +11,8 @@ public class GameThread extends Thread {
     public void run() {
         ga.moveBlockDown();
         while (true) {
+
+
             try {
                 ga.moveBlockDown();
                 Thread.sleep(400);

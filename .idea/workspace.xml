@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1">
-      <change afterPath="$PROJECT_DIR$/src/GameThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TetrisBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TetrisBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TetrisBlock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +21,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1/lib/src.zip!/java.desktop/javax/swing/JComponent.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,6 +64,7 @@
       <workItem from="1676576019075" duration="7967000" />
       <workItem from="1676653867418" duration="341000" />
       <workItem from="1676666094668" duration="2738000" />
+      <workItem from="1676832860154" duration="549000" />
     </task>
     <task id="LOCAL-00001" summary="t1">
       <created>1676557307360</created>

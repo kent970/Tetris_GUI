@@ -58,11 +58,11 @@ this.setPreferredSize(new Dimension(300,300));
 
     public class MyKeyAdapter extends KeyAdapter {
         public void keyPressed(KeyEvent e){
-            if(e.getKeyCode()==KeyEvent.VK_RIGHT){
+            if((e.getKeyCode()==KeyEvent.VK_RIGHT)&&(checkBottom()==true)){
             block.moveRight();
             repaint();
                 System.out.println("rightt");
-            }if(e.getKeyCode()==KeyEvent.VK_LEFT){
+            }if((e.getKeyCode()==KeyEvent.VK_LEFT)&&(checkBottom()==true)){
                 block.moveLeft();
                 repaint();
                 System.out.println("lefttt");
