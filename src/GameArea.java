@@ -14,7 +14,10 @@ public class GameArea extends JPanel {
     public boolean isGameOver = false;
     public int score = 0;
 
-    GameArea(int columns) {
+    private MainGamePanel mainGamePanel;
+
+    GameArea(int columns, MainGamePanel mainGamePanel) {
+        this.mainGamePanel = mainGamePanel;
         this.setVisible(true);
         this.setPreferredSize(new Dimension(300, 300));
         //this.setBackground(Color.pink);
@@ -53,12 +56,14 @@ public class GameArea extends JPanel {
     public void spawnBlock() {
         checkRow();
         Random random = new Random();
-        int block1[][] = {{0, 1}, {1, 1}, {1, 1}};
-        int block2[][] = {{1, 1, 1, 1}, {0, 0, 0, 1}};
-        int block3[][] = {{1, 1}, {1, 1}, {0, 1}, {0, 1}};
+        int block1[][] = {{1,1,1,1}};
+        int block2[][] = {{1, 1, 1}, {1, 0, 0}};
+        int block3[][] = {{1, 1, 1}, {0, 0 ,1}};
         int block4[][] = {{1, 1}, {1, 1}};
-        // dlaczego block4 jest redundant???
-        int blockTab[][][] = {block1, block2, block3};
+        int block5[][]={ {0,1,1},{1,1,0}   };
+        int block6[][]={ {1,1,0},{0,1,1} };
+        int block7[][]={{0,1,0},{1,1,1}  };
+        int blockTab[][][] = {block1, block2, block3,block4,block5,block6,block7};
         Color colortab[] = {Color.BLACK, Color.BLUE, Color.ORANGE, Color.red, Color.green};
         block = new TetrisBlock(blockTab[random.nextInt(blockTab.length)], colortab[random.nextInt(colortab.length)]);
         block.spawn(gridColumns);
@@ -84,6 +89,8 @@ public class GameArea extends JPanel {
             }
             if ((e.getKeyCode() == KeyEvent.VK_UP) && (checkBottom() == true)) {
                 block.rotateBlock();
+                if(block.getRightEdge()>=gridColumns)  block.setX(gridColumns-block.getWidth());
+                if(block.getLeftEdge()<0)   block.setY(0);
                 System.out.println("rotation");
                 repaint();
             }
@@ -191,7 +198,7 @@ public class GameArea extends JPanel {
                     count++;
                 }
             }
-            if (count == 10) {
+            if (count == gridRows) {
                 clearRow(i);
             }
             // System.out.println("count checkrow: "+count);
@@ -205,7 +212,8 @@ public class GameArea extends JPanel {
             }
         }
         score++;
-        System.out.println(score);
+        mainGamePanel.setScore(score);
+        System.out.println("SCORE : "+score);
     }
 
     protected void drawBlock(Graphics g) {

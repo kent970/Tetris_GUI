@@ -2,8 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GameFrame extends JFrame {
+
+    MainGamePanel gamePanel = new MainGamePanel();
+
     GameFrame() {
-        this.setContentPane(new MainGamePanel());
+        this.setContentPane(gamePanel);
         this.setVisible(true);
         this.setDefaultCloseOperation(3);
         this.setResizable(true);
@@ -12,5 +15,8 @@ public class GameFrame extends JFrame {
         this.pack();
     }
 
+    private void setScore(int score){
+        gamePanel.setScore(score);
+    }
 
 }

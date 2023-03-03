@@ -25,9 +25,6 @@
       </list>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1/lib/src.zip!/java.desktop/javax/swing/JComponent.java" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,6 +33,7 @@
   </component>
   <component name="ProjectId" id="2LoeIFbVtwRMPNdBngRtiMu6MD6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -81,6 +79,8 @@
       <workItem from="1677609002109" duration="1465000" />
       <workItem from="1677610942216" duration="326000" />
       <workItem from="1677681380091" duration="4000" />
+      <workItem from="1677844662046" duration="505000" />
+      <workItem from="1677879756632" duration="1210000" />
     </task>
     <task id="LOCAL-00001" summary="t1">
       <created>1676557307360</created>
@@ -115,12 +115,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GameArea.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GameArea.java</url>
-          <line>99</line>
+          <line>106</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
