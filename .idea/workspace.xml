@@ -7,7 +7,10 @@
     <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TetrisBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TetrisBlock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +25,14 @@
       </list>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1/lib/src.zip!/java.desktop/javax/swing/JComponent.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2LoeIFbVtwRMPNdBngRtiMu6MD6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -65,6 +74,13 @@
       <workItem from="1676653867418" duration="341000" />
       <workItem from="1676666094668" duration="2738000" />
       <workItem from="1676832860154" duration="549000" />
+      <workItem from="1676913040186" duration="13043000" />
+      <workItem from="1677171963323" duration="6134000" />
+      <workItem from="1677522241921" duration="6949000" />
+      <workItem from="1677583934468" duration="5527000" />
+      <workItem from="1677609002109" duration="1465000" />
+      <workItem from="1677610942216" duration="326000" />
+      <workItem from="1677681380091" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="t1">
       <created>1676557307360</created>
@@ -93,5 +109,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="t1" />
     <option name="LAST_COMMIT_MESSAGE" value="t1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GameArea.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GameArea.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

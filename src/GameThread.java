@@ -11,18 +11,21 @@ public class GameThread extends Thread {
     public void run() {
         ga.moveBlockDown();
         while (true) {
-
-
+            if (ga.isGameOver == true) {
+                System.out.println("GAME OVER");
+                ga.setFocusable(false);
+                break;
+            }
+            if (ga.checkBottom() == false) {
+                System.out.println("nowy spawn");
+                ga.spawnBlock();
+                //ga.drawBackground();
+            }
             try {
                 ga.moveBlockDown();
-                Thread.sleep(400);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
-
             }
-
         }
     }
-
-
-
 }
