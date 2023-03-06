@@ -241,4 +241,12 @@ public class GameArea extends JPanel {
             }
         }
     }
+    public void gameOver(){
+
+        repaint();
+        System.out.println("GAME OVER");
+        this.setFocusable(false);
+        scoreLabel scoreLabel = new scoreLabel();
+
+    }
 }

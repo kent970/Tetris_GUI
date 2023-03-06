@@ -12,8 +12,7 @@ public class GameThread extends Thread {
         ga.moveBlockDown();
         while (true) {
             if (ga.isGameOver == true) {
-                System.out.println("GAME OVER");
-                ga.setFocusable(false);
+                ga.gameOver();
                 break;
             }
             if (ga.checkBottom() == false) {
