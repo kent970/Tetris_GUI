@@ -1,5 +1,6 @@
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 public class GameThread extends Thread {
     private GameArea ga;
@@ -22,7 +23,7 @@ public class GameThread extends Thread {
             }
             try {
                 ga.moveBlockDown();
-                Thread.sleep(800);
+                Thread.sleep(400);
             } catch (InterruptedException e) {
             }
         }

@@ -242,11 +242,18 @@ public class GameArea extends JPanel {
         }
     }
     public void gameOver(){
-
         repaint();
         System.out.println("GAME OVER");
         this.setFocusable(false);
-        scoreLabel scoreLabel = new scoreLabel();
+        scoreLabel scoreLabel = new scoreLabel(score);
+        JFrame goFrame = new JFrame();
+        goFrame.setTitle("GAME OVER");
+        goFrame.setBounds(100, 50, 200, 200);
+        goFrame.setResizable(true);
+        goFrame.setDefaultCloseOperation(3);
+        goFrame.setContentPane(scoreLabel);
+        goFrame.setVisible(true);
 
     }
 }
+

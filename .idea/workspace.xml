@@ -4,13 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1 03 03 12">
-      <change afterPath="$PROJECT_DIR$/src/scoreLabel.java" afterDir="false" />
+    <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1_0303">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scoreLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scoreLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tetri_HUI.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Java/jdk-17.0.4.1/lib/src.zip!/java.desktop/javax/swing/JComponent.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,6 +87,9 @@
       <workItem from="1677879756632" duration="1256000" />
       <workItem from="1678042140387" duration="286000" />
       <workItem from="1678121860811" duration="4092000" />
+      <workItem from="1678128072389" duration="5444000" />
+      <workItem from="1678281178805" duration="4712000" />
+      <workItem from="1678306387596" duration="5102000" />
     </task>
     <task id="LOCAL-00001" summary="t1">
       <created>1676557307360</created>
