@@ -43,26 +43,42 @@ public class MainGamePanel extends JPanel {
         gameThread.start();
     }
     void readPersonScore(){
-        HashMap<String,Integer> readPersonScore = new HashMap<>();
         try {
             FileInputStream fileInputStream = new FileInputStream("score_label.txt");
 
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            HashMap hashMap = (HashMap)objectInputStream.readObject();
+            String[][] readTab = (String[][])objectInputStream.readObject();
 
 
             fileInputStream.close();
             objectInputStream.close();
 
-         //   for( Object i : hashMap.keySet()){
-         //       System.out.println(i);
-          //  }
-            for (Object i : hashMap.keySet()) {
-                System.out.print(i+" ");
+
+
+            for(int i=0;i<readTab.length-1;i++){
+                int lowerVal= Integer.parseInt(readTab[i][1]);
+                int higherVal=Integer.parseInt(readTab[i+1][1]);
+//  nie czyta sie int do stringa. po wczytaniu inta do stringa sortowanie tabeli, a potem dodanie w scoreLabel nowego wyniku do tabeli i usuniecie namniejszego
+
+                if(lowerVal< higherVal){
+                    System.out.println("zamiana");
+                    String[] tempTab ={readTab[i][1]};
+                    readTab[i][1]=readTab[i+1][1];
+                  readTab[i+1][1]= Arrays.toString(tempTab);
+               }
+
             }
-            System.out.println();
-            for (Object i : hashMap.values()) {
-                System.out.print(" "+i+" ");
+
+
+
+            for(int i=0;i<readTab.length;i++){
+                System.out.println();
+                for(int j=0;j<readTab[i].length;j++){
+                    System.out.print(readTab[i][j]);
+
+
+                }
+
             }
 
 
