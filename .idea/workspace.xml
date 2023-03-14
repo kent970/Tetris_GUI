@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1_0303">
-      <change afterPath="$PROJECT_DIR$/score_label_BACKUP.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score_label.txt" beforeDir="false" afterPath="$PROJECT_DIR$/score_label.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scoreLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scoreLabel.java" afterDir="false" />
-    </list>
+    <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1_14/03" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +84,7 @@
       <workItem from="1678128072389" duration="5444000" />
       <workItem from="1678281178805" duration="4712000" />
       <workItem from="1678306387596" duration="5102000" />
-      <workItem from="1678794884153" duration="6660000" />
+      <workItem from="1678794884153" duration="6765000" />
     </task>
     <task id="LOCAL-00001" summary="t1">
       <created>1676557307360</created>
@@ -106,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677880997510</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="t1_14/03">
+      <created>1678801840795</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678801840796</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +127,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="t1" />
     <MESSAGE value="t1 03 03 12" />
-    <option name="LAST_COMMIT_MESSAGE" value="t1 03 03 12" />
+    <MESSAGE value="t1_0303" />
+    <MESSAGE value="t1_14/03" />
+    <option name="LAST_COMMIT_MESSAGE" value="t1_14/03" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
