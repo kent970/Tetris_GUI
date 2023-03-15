@@ -2,14 +2,11 @@
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainGamePanel extends JPanel {
     private GameArea ga;
-    String data[][]={{"12","gt"},{"hee","l33"}};
-    String column[]={"34","leee"};
+    String data[][] = new String[10][3];
+    String column[] = {"Nr","Wynik", "Gracz"};
     private JLabel jLabel;
 
     MainGamePanel() {
@@ -21,13 +18,25 @@ public class MainGamePanel extends JPanel {
         this.setLayout(new FlowLayout());
         this.add(jLabel);
 
-        this.add(new JLabel("sdsd"));
+        JTable jTable = new JTable(data, column){
+          private static final long serialVersionUID = 1L;
 
-        JTable jTable = new JTable(data,column);
-        jTable.setBounds(30,40,200,200);
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+        jTable.setBounds(30, 40, 230, 100);
         JScrollPane scrollPane = new JScrollPane(jTable);
+        this.add(scrollPane);
         scrollPane.setEnabled(false);
-        //this.add(scrollPane);
+        scrollPane.setFocusable(false);
+        jTable.setFocusable(false);
+        jTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        jTable.getColumnModel().getColumn(0).setPreferredWidth(30);
+        jTable.getColumnModel().getColumn(1).setPreferredWidth(100);
+        jTable.getColumnModel().getColumn(2).setPreferredWidth(100);
+
         readPersonScore();
         startGame();
 
@@ -42,42 +51,54 @@ public class MainGamePanel extends JPanel {
 
         gameThread.start();
     }
-    void readPersonScore(){
+
+    void readPersonScore() {
         try {
             FileInputStream fileInputStream = new FileInputStream("score_label.txt");
 
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            String[][] readTab = (String[][])objectInputStream.readObject();
-
+            Object[][] readTab = (Object[][]) objectInputStream.readObject();
 
             fileInputStream.close();
             objectInputStream.close();
 
-
-
-            for(int i=0;i<readTab.length-1;i++){
-                int lowerVal= Integer.parseInt(readTab[i][1]);
-                int higherVal=Integer.parseInt(readTab[i+1][1]);
-//  nie czyta sie int do stringa. po wczytaniu inta do stringa sortowanie tabeli, a potem dodanie w scoreLabel nowego wyniku do tabeli i usuniecie namniejszego
-
-                if(lowerVal< higherVal){
-                    System.out.println("zamiana");
-                    String[] tempTab ={readTab[i][1]};
-                    readTab[i][1]=readTab[i+1][1];
-                  readTab[i+1][1]= Arrays.toString(tempTab);
-               }
-
+            String[] stringTab = new String[readTab.length];
+            int[] intTab = new int[readTab.length];
+            for (int i = 0; i < readTab.length; i++) {
+                stringTab[i] = String.valueOf(readTab[i][0]);
+                intTab[i] = Integer.valueOf(String.valueOf(readTab[i][1]));
             }
 
 
+            for (int i = 0; i < readTab.length; i++) {
+                for (int j = i + 1; j < readTab.length; j++) {
+                    // int lowerVal= (int) readTab[i][1];
+                    // int higherVal= (int) readTab[i+1][1];
+//  dodanie w scoreLabel nowego wyniku do tabeli i usuniecie namniejszego
 
-            for(int i=0;i<readTab.length;i++){
-                System.out.println();
-                for(int j=0;j<readTab[i].length;j++){
-                    System.out.print(readTab[i][j]);
+                    if (intTab[i] > intTab[j]) {
+                        // System.out.println("zamiana");
+                        int tempInt = intTab[i];
+                        String tempString = stringTab[i];
+                        stringTab[i] = stringTab[j];
+                        intTab[i] = intTab[j];
 
+                        stringTab[j] = tempString;
+                        intTab[j] = tempInt;
+                        //tempTabInt;
+                        //  readTab[i+1][1]= new Object[]{ tempTab};
 
+                    }
                 }
+            }
+            for (int i = 0; i < readTab.length; i++) {
+                System.out.println(stringTab[i] + " " + intTab[i]);
+            }
+
+            for (int i = 0; i < readTab.length; i++) {
+                data[i][0]=String.valueOf(i+1);
+                data[i][1]=String.valueOf(intTab[i]);
+                data[i][2]=stringTab[i];
 
             }
 

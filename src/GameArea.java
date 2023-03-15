@@ -91,7 +91,7 @@ public class GameArea extends JPanel {
                 block.rotateBlock();
                 if(block.getRightEdge()>=gridColumns)  block.setX(gridColumns-block.getWidth());
                 if(block.getLeftEdge()<0)   block.setY(0);
-                System.out.println("rotation");
+                //System.out.println("rotation");
                 repaint();
             }
             if ((e.getKeyCode() == KeyEvent.VK_DOWN) && (checkBottom() == true)) {
@@ -153,7 +153,7 @@ public class GameArea extends JPanel {
 
     boolean checkRight() {
         if (block.getRightEdge() == gridColumns) {
-            System.out.println("check right");
+            //System.out.println("check right");
             return false;
         }
         int[][] shape = block.getShape();
@@ -213,7 +213,7 @@ public class GameArea extends JPanel {
         }
         score++;
         mainGamePanel.setScore(score);
-        System.out.println("SCORE : "+score);
+        //System.out.println("SCORE : "+score);
     }
 
     protected void drawBlock(Graphics g) {

@@ -55,7 +55,7 @@ public class scoreLabel extends JPanel {
              } catch (IOException e) {
                  throw new RuntimeException(e);
              }
-             String[][] scoreTab = (String[][])objectInputStream.readObject();
+             Object[][] scoreTab = (Object[][])objectInputStream.readObject();
 
  /*
             String[][] scoreTab = new String[10][2];
@@ -82,29 +82,60 @@ public class scoreLabel extends JPanel {
 */
              //scoreTab[1][1]= new String[]{{"James"},{"7"}};
 
-            for(int i=0;i<scoreTab.length;i++){
+             //deklaracja tablic pomocniczych
+             String[] stringTab = new String[scoreTab.length];
+             int[] intTab = new int[scoreTab.length];
+             for(int i=0;i<scoreTab.length;i++){
+                 stringTab[i]= String.valueOf(scoreTab[i][0]);
+                 intTab[i] = Integer.valueOf(String.valueOf(scoreTab[i][1]));
+                 System.out.println(stringTab[i]+intTab[i]);
+             }
+             //bubble sort
+             for(int i=0;i<scoreTab.length;i++){
+                 for(int j=i+1;j<scoreTab.length;j++) {
 
-                if(scoreTab[i][1] != null){
-                    scoreTab[i][0]=scoreField.getText()+" ";
-                    scoreTab[i][1]=String.valueOf(score);
-                    break;
-                }
+                     if ( intTab[i]> intTab[j]) {
+                         int tempInt = intTab[i];
+                         String tempString = stringTab[i];
+                         stringTab[i] = stringTab[j];
+                         intTab[i] = intTab[j];
 
-            }
+                         stringTab[j] = tempString;
+                         intTab[j] = tempInt;
+                     }
+                 }
+             }
+
+
+            //zamiana na nowy wynik
+            int k=0;
+             while((score>intTab[k])&&(k<scoreTab.length)){
+                 k++;
+             }
+             if(score>intTab[0]){
+
+
+                 for(int i=0;i<k-1;i++){
+                     intTab[i]=intTab[i+1];
+                     stringTab[i]=stringTab[i+1];
+                 }
+                 intTab[k-1]=score;
+                 stringTab[k-1]=scoreField.getText();
+
+
+             }
+
 
 
              System.out.println("wyspisuje");
+             for(int i=0;i< scoreTab.length;i++){
+                 System.out.println(stringTab[i]+" "+intTab[i]);
+             }
 
-
-
+             //zapisywanie 2 tablic do 1 spowrotem
              for(int i=0;i<scoreTab.length;i++){
-                 System.out.println();
-                 for(int j=0;j<scoreTab[i].length;j++){
-                     System.out.print(scoreTab[i][j]);
-
-
-                 }
-
+                 scoreTab[i][0] = stringTab[i];
+                 scoreTab[i][1] =  String.valueOf(intTab[i]);
              }
 
              try {

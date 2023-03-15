@@ -3,7 +3,7 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        //build 14.03.23 14:51
+        //build 15.03.23 8:44
         new GameFrame();
     }
 }
