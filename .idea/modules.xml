@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tetri_HUI.iml" filepath="$PROJECT_DIR$/Tetri_HUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tetri_GUI.iml" filepath="$PROJECT_DIR$/Tetri_GUI.iml" />
     </modules>
   </component>
 </project>

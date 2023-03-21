@@ -38,9 +38,16 @@ public class MainGamePanel extends JPanel {
         jTable.getColumnModel().getColumn(2).setPreferredWidth(100);
 
         readPersonScore();
+
+
+
+
         startGame();
 
     }
+
+    //// draw next block
+
 
     void setScore(int score) {
         jLabel.setText("SCORE: " + score);

@@ -20,33 +20,18 @@ public class GameThread extends Thread {
             if (ga.checkBottom() == false) {
                // System.out.println("nowy spawn");
                 ga.spawnBlock();
-                gameSpeed();
+               // gameSpeed();
                 //ga.drawBackground();
             }
             try {
                 ga.moveBlockDown();
-                Thread.sleep(speed);
+                Thread.sleep((long) (1000/(ga.score+1)));
             } catch (InterruptedException e) {
             }
         }
     }
     void gameSpeed(){
 
-        if(ga.score>0){
-            System.out.println("speed 800");
-            speed=800;
-        }
-        if(ga.score>1){
-            System.out.println("speed 600");
-            speed=500;
-        }
-        if(ga.score>2){
-            System.out.println("speed 400");
-            speed=300;
-        }
-        if(ga.score>3){
-            System.out.println("speed 200");
-            speed=50;
-        }
+      speed = speed/ ga.score;
     }
 }

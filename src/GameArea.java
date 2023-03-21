@@ -6,6 +6,9 @@ import java.awt.event.KeyEvent;
 import java.util.Random;
 
 public class GameArea extends JPanel {
+    Random random = new Random();
+    int currentDice=random.nextInt(6);
+    int nextDice=random.nextInt(6);
     private int gridRows;
     private int gridColumns;
     private int gridCellSize;
@@ -19,7 +22,7 @@ public class GameArea extends JPanel {
     GameArea(int columns, MainGamePanel mainGamePanel) {
         this.mainGamePanel = mainGamePanel;
         this.setVisible(true);
-        this.setPreferredSize(new Dimension(300, 300));
+        this.setPreferredSize(new Dimension(450, 300));
         //this.setBackground(Color.pink);
         this.setBorder(new BevelBorder(1));
         gridColumns = columns;
@@ -49,13 +52,14 @@ public class GameArea extends JPanel {
         }
         drawBackground(g);
         drawBlock(g);
+        drawNextBlock(g);
     }
 
     private TetrisBlock block;
-
+    private TetrisBlock nextBlock;
     public void spawnBlock() {
         checkRow();
-        Random random = new Random();
+
         int block1[][] = {{1,1,1,1}};
         int block2[][] = {{1, 1, 1}, {1, 0, 0}};
         int block3[][] = {{1, 1, 1}, {0, 0 ,1}};
@@ -64,9 +68,18 @@ public class GameArea extends JPanel {
         int block6[][]={ {1,1,0},{0,1,1} };
         int block7[][]={{0,1,0},{1,1,1}  };
         int blockTab[][][] = {block1, block2, block3,block4,block5,block6,block7};
-        Color colortab[] = {Color.BLACK, Color.BLUE, Color.ORANGE, Color.red, Color.green};
-        block = new TetrisBlock(blockTab[random.nextInt(blockTab.length)], colortab[random.nextInt(colortab.length)]);
+        Color colortab[] = {Color.cyan, Color.BLUE, Color.ORANGE, Color.red, Color.green};
+
+        currentDice=nextDice;
+        nextDice=random.nextInt(blockTab.length);
+        block = new TetrisBlock(blockTab[currentDice], colortab[random.nextInt(colortab.length)]);
+        nextBlock = new TetrisBlock(blockTab[nextDice],colortab[1]);
+
+        System.out.println("nastepny blok to" + nextDice);
         block.spawn(gridColumns);
+        //nextBlock.spawn(gridColumns);
+        //////////////////
+
     }
 
     public void moveBlockDown() {
@@ -227,6 +240,17 @@ public class GameArea extends JPanel {
                 }
             }
         }
+    }
+    protected void drawNextBlock(Graphics g) {
+        for (int i = 0; i < nextBlock.getHeight(); i++) {
+            for (int j = 0; j < nextBlock.getWidth(); j++) {
+                if (nextBlock.getShape()[i][j] == 1) {
+                    g.setColor(Color.black);
+                    g.drawRect(((j + nextBlock.getX()) * gridCellSize)+200, ((i + nextBlock.getY()) * gridCellSize)+90, gridCellSize, gridCellSize);
+                }
+            }
+        }
+        System.out.println("draw next block");
     }
 
     private void drawBackground(Graphics g) {
