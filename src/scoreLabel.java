@@ -109,7 +109,7 @@ public class scoreLabel extends JPanel {
 
             //zamiana na nowy wynik
             int k=0;
-             while((score>intTab[k])&&(k<scoreTab.length)){
+             while((score>intTab[k])&&(k<scoreTab.length-1)){
                  k++;
              }
              if(score>intTab[0]){

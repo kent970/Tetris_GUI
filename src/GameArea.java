@@ -224,7 +224,7 @@ public class GameArea extends JPanel {
                 backgroundTab[k][j] = backgroundTab[k - 1][j];
             }
         }
-        score++;
+        score=(score+100)+(score/2);
         mainGamePanel.setScore(score);
         //System.out.println("SCORE : "+score);
     }

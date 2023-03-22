@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1_15/03">
-      <change afterPath="$PROJECT_DIR$/src/nextBlock.java" afterDir="false" />
+    <list default="true" id="fff7ed2d-47f5-49a0-8e39-043579850fe0" name="Changes" comment="t1_21/03">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/score_label.txt" beforeDir="false" afterPath="$PROJECT_DIR$/score_label.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score_label_BACKUP.txt" beforeDir="false" afterPath="$PROJECT_DIR$/score_label_BACKUP.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainGamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainGamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scoreLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/scoreLabel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,21 +63,6 @@
       <recent name="C:\Users\kedzi\IdeaProjects\untitled7" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Tetri_GUI" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Tetri_GUI" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -115,7 +99,9 @@
       <workItem from="1678982638931" duration="1052000" />
       <workItem from="1678987496000" duration="157000" />
       <workItem from="1679327591385" duration="4710000" />
-      <workItem from="1679410011971" duration="3890000" />
+      <workItem from="1679410011971" duration="4598000" />
+      <workItem from="1679414753609" duration="475000" />
+      <workItem from="1679519955840" duration="715000" />
     </task>
     <task id="LOCAL-00001" summary="t1">
       <created>1676557307360</created>
@@ -152,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678866326814</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="t1_21/03">
+      <created>1679414083833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679414083833</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +168,8 @@
     <MESSAGE value="t1_0303" />
     <MESSAGE value="t1_14/03" />
     <MESSAGE value="t1_15/03" />
-    <option name="LAST_COMMIT_MESSAGE" value="t1_15/03" />
+    <MESSAGE value="t1_21/03" />
+    <option name="LAST_COMMIT_MESSAGE" value="t1_21/03" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

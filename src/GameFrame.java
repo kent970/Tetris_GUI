@@ -10,9 +10,9 @@ public class GameFrame extends JFrame {
         this.setVisible(true);
         this.setDefaultCloseOperation(3);
         this.setResizable(false);
-        this.setSize(500, 500);
+        this.setSize(500, 600);
         this.setLayout(new FlowLayout(0));
-        this.pack();
+        //this.pack();
     }
 
     private void setScore(int score){

@@ -25,13 +25,9 @@ public class GameThread extends Thread {
             }
             try {
                 ga.moveBlockDown();
-                Thread.sleep((long) (1000/(ga.score+1)));
+                Thread.sleep(1000/(((ga.score/1000)+1)));
             } catch (InterruptedException e) {
             }
         }
-    }
-    void gameSpeed(){
-
-      speed = speed/ ga.score;
     }
 }
